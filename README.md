@@ -3,7 +3,7 @@
 Frontend implementation for the CodeLeap engineering challenge.
 
 ## Deployment URL
-- https://codeleap-arcelon.vercel.app
+- https://codeleap-arcelon-alves.vercel.app
 - Status on February 6, 2026: not deployed yet (`DEPLOYMENT_NOT_FOUND`), so run a Vercel production deploy for this repo.
 
 ## Run
