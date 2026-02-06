@@ -1,0 +1,430 @@
+:root {
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #dddddd;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.page-center {
+  align-items: center;
+  padding: 24px;
+}
+
+.app-shell {
+  width: min(800px, 100vw);
+  min-height: 100vh;
+  background: #ffffff;
+  border: 1px solid #999999;
+}
+
+.app-header {
+  height: 80px;
+  padding: 0 37px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #7695ec;
+  border-bottom: 1px solid #999999;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.content-stack {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  width: 100%;
+  border: 1px solid #999999;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.title-large {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.label {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.input,
+.textarea,
+.select {
+  width: 100%;
+  border: 1px solid #777777;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 8px 10px;
+  background: #ffffff;
+}
+
+.input {
+  height: 32px;
+}
+
+.textarea {
+  min-height: 74px;
+  resize: vertical;
+}
+
+.select {
+  height: 36px;
+}
+
+.actions-end {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button {
+  min-width: 111px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.button-primary {
+  background: #7695ec;
+  color: #ffffff;
+}
+
+.button-header {
+  min-width: 92px;
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.button-secondary {
+  background: #ffffff;
+  border-color: #000000;
+  color: #000000;
+}
+
+.button-danger {
+  background: #ff5151;
+  color: #ffffff;
+}
+
+.button-success {
+  background: #47b960;
+  color: #ffffff;
+}
+
+.signup-card {
+  width: min(500px, 100%);
+  border: 1px solid #cccccc;
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 24px;
+}
+
+.create-card {
+  padding: 24px;
+}
+
+.feed-controls {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 180px 160px;
+  gap: 12px;
+}
+
+.control-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.control-item-wide {
+  min-width: 0;
+}
+
+.post-card {
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.post-header {
+  min-height: 70px;
+  background: #7695ec;
+  border-radius: 16px 16px 0 0;
+  padding: 18px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.post-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.icon-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-button {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background: transparent;
+  cursor: pointer;
+}
+
+.icon-button svg {
+  width: 30px;
+  height: 30px;
+}
+
+.icon-button:hover {
+  opacity: 0.82;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 24px 0;
+}
+
+.post-username,
+.post-time {
+  font-size: 18px;
+  color: #777777;
+}
+
+.post-time {
+  text-align: right;
+}
+
+.post-content {
+  margin: 16px 24px 24px;
+  white-space: pre-wrap;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.mention {
+  color: #7695ec;
+  font-weight: 700;
+}
+
+.post-footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 24px 20px;
+}
+
+.like-button {
+  border: 1px solid #7695ec;
+  background: #ffffff;
+  color: #7695ec;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.like-button.liked {
+  background: #7695ec;
+  color: #ffffff;
+}
+
+.likes-count {
+  font-size: 13px;
+  color: #777777;
+}
+
+.comment-toggle-button {
+  border: 0;
+  background: transparent;
+  color: #777777;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.comments-panel {
+  border-top: 1px solid #eeeeee;
+  margin: 0 24px 20px;
+  padding-top: 12px;
+}
+
+.comment-form {
+  display: flex;
+  gap: 8px;
+}
+
+.comment-submit-button {
+  min-width: 64px;
+}
+
+.comment-list {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: #444444;
+  font-size: 14px;
+}
+
+.comment-item + .comment-item {
+  margin-top: 6px;
+}
+
+.status-card {
+  border: 1px solid #999999;
+  border-radius: 16px;
+  padding: 20px 24px;
+  background: #ffffff;
+  font-size: 16px;
+}
+
+.status-card.error {
+  color: #b30000;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(119, 119, 119, 0.8);
+}
+
+.modal-card {
+  position: relative;
+  z-index: 1;
+  width: min(660px, 100%);
+  border: 1px solid #999999;
+  border-radius: 16px;
+  background: #ffffff;
+  padding: 24px;
+  animation: modal-enter 0.15s ease-out;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.actions-center {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes modal-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 820px) {
+  .app-shell {
+    width: 100%;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .content-stack {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .feed-controls {
+    grid-template-columns: 1fr;
+  }
+
+  .post-header {
+    padding: 14px 16px;
+  }
+
+  .post-meta {
+    padding: 16px 16px 0;
+  }
+
+  .post-content {
+    margin: 12px 16px 16px;
+    font-size: 16px;
+  }
+}
